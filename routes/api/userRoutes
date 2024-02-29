@@ -1,0 +1,8 @@
+const router = require('express').Router();
+
+// All users 
+// Single users 
+// Add users
+// Update user
+// Delete user 
+// BONUS: Remove a user's associated thoughts when deleted.
