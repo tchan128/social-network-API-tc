@@ -1,10 +1,4 @@
-const { User, Thought } = require('../models')
-
-// Single users 
-// Add users
-// Update user
-// Delete user 
-// BONUS: Remove a user's associated thoughts when deleted.
+const { User, Thought } = require('../models');
 
 module.exports = {
     // Get all users
