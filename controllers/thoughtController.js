@@ -108,7 +108,7 @@ module.exports = {
         try {
             const thought = await Thought.findOneAndDelete(
                 { _id: req.params.thoughtId },
-                { $pull: { reactions: { reactionId: req.params.reactionId } } },
+                { $pull: { reactions: { reactionId: req.body.reactionId } } },
                 { runValidators: true, new: true }
             );
 
