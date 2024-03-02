@@ -18,8 +18,8 @@ router.route('/').get(getThoughts).post(createThought);
 router
     .route('/:thoughtId')
     .get(getSingleThought)
-    .get(updateThought)
-    .get(deleteThought)
+    .put(updateThought)
+    .delete(deleteThought)
 
 // /api/thoughts/:thoughtId/reactions
 
