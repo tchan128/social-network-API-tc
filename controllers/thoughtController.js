@@ -5,6 +5,7 @@ module.exports = {
     async getThoughts(req, res) {
         try {
             const thoughts = await Thought.find()
+                .select('-__v');
 
         res.json(thoughts);
 
@@ -18,7 +19,9 @@ module.exports = {
     // Get a single thought by _id
     async getSingleThought(req, res) {
         try {
-            const thought = await Thought.findOne({ _id: req.params.thoughtId });
+            const thought = await Thought.findOne({ _id: req.params.thoughtId })
+                .select('-__v');
+            
             res.json(thought);
 
             if (!thought) {
@@ -38,7 +41,7 @@ module.exports = {
 
             const user = await User.findOneAndUpdate(
                 {_id: req.body.userId},
-                { $addToSet: { thoughts: thought._id } },
+                { $addToSet: { thoughts: thought } },
                 { runValidators: true, new: true }
             );
             
