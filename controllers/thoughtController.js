@@ -74,13 +74,13 @@ module.exports = {
     async updateThought(req, res) {
         try {
             const thought = await Thought.findOneAndUpdate(
-                { _id: req.body.thoughtId },
+                { _id: req.params.thoughtId },
                 { $set: req.body },
                 { new: true }
             )
 
             if (!thought) {
-                res.status(404).json({ message: 'No user with this id!' })
+                res.status(404).json({ message: 'No thought with this id!' })
             }
 
             res.json(thought)
