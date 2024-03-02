@@ -4,7 +4,9 @@ module.exports = {
     // Get all users
     async getUsers(req, res) {
         try {
-            const users = await User.find();
+            const users = await User.find()
+                .select('-__v -id')
+                
             res.json(users);
         } catch (err) {
             res.status(500).json(err);
@@ -15,7 +17,7 @@ module.exports = {
     async getSingleUser(req, res) {
         try {
             const user = await User.findOne({_id: req.params.userId})
-                .select('-__v');
+                .select('-__v -id');
             
             if (!user) {
                 return res.status(404).json({ message: 'No user with that ID' });
@@ -48,7 +50,10 @@ module.exports = {
             }
 
             // Delete associating thoughts
-            await Thought.deleteMany({ _id: { $in: user.thoughts } })
+            if ((user.thoughts).length > 1) {
+                await Thought.deleteMany({ _id: { $in: user.thoughts } })
+            }
+
             res.json({ message: 'User and thoughts deleted!' });
         } catch (err) {
             res.status(500).json(err)
