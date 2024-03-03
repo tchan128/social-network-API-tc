@@ -102,17 +102,22 @@ To see the system in action please visit this link:
 
 1. GET all users
 
+<img width="1172" alt="Screenshot 2024-03-03 at 2 10 32 AM" src="https://github.com/tchan128/social-network-API-tc/assets/56553374/37458d83-5a53-4f41-b7db-6f962ee5f4cf">
 
 2. Get all thoughts
 
+<img width="1171" alt="Screenshot 2024-03-03 at 2 12 01 AM" src="https://github.com/tchan128/social-network-API-tc/assets/56553374/1bf9c807-b270-4114-8841-298aee773439">
 
 3. CREATE user
+
+<img width="1170" alt="Screenshot 2024-03-03 at 2 12 33 AM" src="https://github.com/tchan128/social-network-API-tc/assets/56553374/d6272bd0-e00d-440b-a1d1-5414f45a3220">
+<img width="1170" alt="Screenshot 2024-03-03 at 2 12 41 AM" src="https://github.com/tchan128/social-network-API-tc/assets/56553374/ec1b755f-3fbf-49d4-9674-e3f51866a2e4">
 
 
 4. CREATE thought
    
-
-5. DELETE category
+<img width="1171" alt="Screenshot 2024-03-03 at 2 15 08 AM" src="https://github.com/tchan128/social-network-API-tc/assets/56553374/2b62a1c1-d251-43e8-994d-4c95b4b4f507">
+<img width="1172" alt="Screenshot 2024-03-03 at 2 15 15 AM" src="https://github.com/tchan128/social-network-API-tc/assets/56553374/b1009328-df45-47f3-97de-fba659eadc78">
 
 
 ## Credits
