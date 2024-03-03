@@ -24,7 +24,7 @@
 
 ## About the Project
 
-This project is a social network API. The API is built with Javascript, Mongoose, ExpressJS, and nodeJS. The MongoDB was used and to build and visualize the functionality and the localhost server, Insomnia was used. In this system, the main components are being able to:
+This project is a social network API. The API is built with Javascript, Mongoose, ExpressJS, and nodeJS. The MongoDB was used and to build and visualize the functionality and the localhost server, Insomnia and Studio 3T was used. In this system, the main components are being able to:
 
 - Create, update, and delete user
 - View all users and view a single user
@@ -39,20 +39,21 @@ This project is a social network API. The API is built with Javascript, Mongoose
 
 To be able to use this application, you need to git clone this repository into your local machine. 
 
-Afterward, you need to make an `.env` file with the following information :
+You can then make your own `.env` file with the following information:
 
 ```
-DB_NAME = 'ecommerce_db'
-DB_USER = YOUR USERNAME
-DB_PW = YOUR PASSWORD
+MONGODB_URI=mongodb://127.0.0.1:27017/networkDB
 ```
 
-Afterward, you can use the commands in `schema.sql` to build your database on WorkBench. Once those are completed, you can install packages that are needed to work this program:
+Once that's completed you can connect on Studio 3T
+
+Next, you install packages that are needed to work this program:
 
 ```
-npm install -y
-npm install sequelize
-npm install mysql
+npm init -y
+npm install
+npm install mongoose
+npm install mongoDB
 npm install express
 npm install dotenv
 ```
@@ -60,16 +61,10 @@ npm install dotenv
 Once those are installed, you can go ahead and run this command to start the system
 
 ```
-npm run seed
-```
-
-Once seeded, please go ahead and run this command:
-
-```
 npm run start
 ```
 
-You should now be able to test out the functionality on Insomnia. 
+You should now be able to test out the functionality on Insomnia and see the database on Studio 3T. 
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
  
