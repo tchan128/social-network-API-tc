@@ -18,7 +18,6 @@ const reactionSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now,
-            // getter to set date in specific format
         }
 });
 
@@ -33,7 +32,6 @@ const thoughtSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now,
-            // getter to set date in specific format
         },
         userName: {
             type: String,
@@ -51,9 +49,32 @@ const thoughtSchema = new Schema(
 
 thoughtSchema
     .virtual('reactionCount')
-    // Retrieve length of the thought's reaction
     .get(function () {
         return (this.reactions).length
+    });
+
+thoughtSchema
+    .virtual('timeFormat')
+    .get(function (){
+        return this.createdAt.toLocaleString('en-US',{
+            month: 'short', 
+            day: 'numeric', 
+            year: 'numeric', 
+            hour: 'numeric', 
+            minute: '2-digit', 
+        });
+    });
+
+reactionSchema
+    .virtual('timeFormat')
+    .get(function (){
+        return this.createdAt.toLocaleString('en-US',{
+            month: 'short', 
+            day: 'numeric', 
+            year: 'numeric', 
+            hour: 'numeric', 
+            minute: '2-digit', 
+        });
     });
 
 const Thought = model('Thought', thoughtSchema)
