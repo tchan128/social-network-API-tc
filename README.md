@@ -1,8 +1,9 @@
 <div id="readme-top" align="center">
-    <a href="https://github.com/tchan128/social-network-API-tc"><img src="./asset/ecommerce.png" alt="Logo" width="80" height="80"></a>
+    <a href="https://github.com/tchan128/social-network-API-tc"><img src="./assets/social-media.png" alt="Logo" width="80" height="80"></a>
     <h3 align="center">Social Network API</h3>
     <p align="center">
-        The motivation for this product is to improve upon a starter code to make a functioning e-commerce backend. This functioning system allows users to search via category, tags, and products and allows them to create, update, and delete items. I built this project because as we move into a more digital world, it is something that helps customers shop online with ease. Additionally, it allows businesses to expand their experience and scope. This is a system that physical stores can use to help organize their inventory and organize the products they have on a database. This app is a solution for individuals who want to easily access and modify information in their inventory. It allows them to stay organized and pull up the information they need right away. Through this project, I learned how to develop my skills in Sequelize and further my understanding of Express.js.  
+        The motivation for this project is to create a platform so that users can add friends, share their thoughts, and react to each other's thoughts. Nowadays, the world is connected via the network and a part of human nature is to connect with each other no matter where each other is. I built this project because I want to help others easily connect with each other in the digital world and share experiences with friends, family, and loved ones.
+        This platform is a solution for individuals who is looking for a easy-to-use app where they can connect with their friends easily. You can quickly and easily see other's thoughts and react to them, keep up with their latest doings. Through this project, I learned how to develop a backend using NoSQL and further my understanding of Express.js and working with local servers. 
         <br/>
         <br/>
         <a href="https://github.com/tchan128/social-network-API-tc"><strong>Explore the docs »</strong></a>
@@ -70,46 +71,48 @@ You should now be able to test out the functionality on Insomnia and see the dat
  
 ## Usage
 
-In this project, an e-commerce backend is improved to help customers and businesses to engage in online buying and selling with ease. As described there are many functionalities within this backend, but below are the main usages and explanations when using on Insomnia:
+In this project, a social network API is created to build a platform where users can share their thoughts, react to thoughts, and also add friends in the network. As described there are many functionalities with this backend, but below are the main usages and explanation when testing on Insomnia:
 
-- Accessing `api/categories`
-  - GET route will display all categories with their associated product & tags
-- Accessing `api/categories/:id`
-  - GET route will display the specific category with its associated product & tag for a category that is entered in place of `:id` 
-  - PUT route will allow the user to edit the specific category's name
-  - DELETE route will allow the user to delete the specific category
-- Accessing `api/products`
-  - GET route will display all products with their associated categories and tags
-- Accessing `api/products/:id`
-  - GET route will display the specific product with its associated category & tag
-  - PUT route will allow the user to edit the specific product's properties
-  - DELETE route will allow the user to delete the specific product
-- Accessing `api/tags`
-  - GET route will display all products with their associated categories and products
-- Accessing `api/tags/:id`
-  - GET route will display the specific category with its associated product & category
-  - PUT route will allow the user to edit the specific tag's name
-  - DELETE route will allow the user to delete the specific tag
+- Accessing `api/users`
+  - GET route will display all users
+  - POST route will create a new user when with the body `userName` and `email`
+- Accessing `api/users/:userId`
+  - GET route will display a single user
+  - PUT route will allow the user to edit their username and email
+  - DELETE route will allow the user to delete the user
+- Accessing `api/users/:userId/friends/friendId`
+  - POST route will allow the user with `userId` to add friend with `friendId`
+  - DELETE route will allow the user with `userId` to delete friend with `friendId`
+- Accessing `api/thoughts`
+  - GET route will display all thoughts
+  - POST route will create a new a new thought when with the body `thoughtText` `userName` and `userId`
+- Accessing `api/thoughts/thoughtId`
+  - GET route will display a singular thought with `thoughtId`
+  - PUT route will allow the user to edit their thought 
+  - DELETE route will allow the user go delete their thought
+- Accessing `api/thoughts/:thoughtId/reactions`
+  - POST route will add a reaction to the thought with `thoughtId`
+  - DELETE route will delete a reaction to the thought with `thoughtId`
 
-To see the system in action please visit this link: https://share.vidyard.com/watch/9eCJY9rikzQRKRzBZCveb7?
+To see the system in action please visit this link: 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Visuals
 
-1. GET all categories
+1. GET all users
 
 <img width="1409" alt="Screenshot 2024-01-31 at 10 31 38 PM" src="https://github.com/tchan128/ecommerce-backend-tc/assets/56553374/72708fae-20f6-433a-849c-c0c260c7d819">
 
-2. Get category by ID
+2. Get all thoughts
 
 <img width="1414" alt="Screenshot 2024-01-31 at 10 31 47 PM" src="https://github.com/tchan128/ecommerce-backend-tc/assets/56553374/e56c21d6-39d7-4ce8-a165-be87e7e25a3f">
 
-3. CREATE category
+3. CREATE user
 
 <img width="1411" alt="Screenshot 2024-01-31 at 10 32 01 PM" src="https://github.com/tchan128/ecommerce-backend-tc/assets/56553374/71e8c699-224f-4fc6-9494-1f761afb6489">
 
-4. UPDATE category
+4. CREATE thought
    
 <img width="1409" alt="Screenshot 2024-01-31 at 10 32 10 PM" src="https://github.com/tchan128/ecommerce-backend-tc/assets/56553374/b1fa679d-2b03-4401-9266-70eb6e54d351">
 
@@ -129,7 +132,7 @@ In addition to that, some websites that helped with the build of this e-commerce
 - Sequelize Validation & Constraints: https://sequelize.org/docs/v7/models/validations-and-constraints/#:~:text=Using%20the%20%40NotNull%20decorator%2C%20you,the%20query%20to%20the%20database.
 - Sequelize Model Querying: https://sequelize.org/docs/v6/core-concepts/model-querying-basics/
 
-README icon is found here: <a href="https://www.flaticon.com/free-icons/ecommerce" title="ecommerce icons">Ecommerce icons created by DinosoftLabs - Flaticon</a>
+README icon is found here: <a href="https://www.flaticon.com/free-icons/marketing" title="marketing icons">Marketing icons created by Freepik - Flaticon</a>
 
 The README template is found here: https://github.com/othneildrew/Best-README-Template
 
