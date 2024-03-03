@@ -102,23 +102,18 @@ To see the system in action please visit this link:
 
 1. GET all users
 
-<img width="1409" alt="Screenshot 2024-01-31 at 10 31 38 PM" src="https://github.com/tchan128/ecommerce-backend-tc/assets/56553374/72708fae-20f6-433a-849c-c0c260c7d819">
 
 2. Get all thoughts
 
-<img width="1414" alt="Screenshot 2024-01-31 at 10 31 47 PM" src="https://github.com/tchan128/ecommerce-backend-tc/assets/56553374/e56c21d6-39d7-4ce8-a165-be87e7e25a3f">
 
 3. CREATE user
 
-<img width="1411" alt="Screenshot 2024-01-31 at 10 32 01 PM" src="https://github.com/tchan128/ecommerce-backend-tc/assets/56553374/71e8c699-224f-4fc6-9494-1f761afb6489">
 
 4. CREATE thought
    
-<img width="1409" alt="Screenshot 2024-01-31 at 10 32 10 PM" src="https://github.com/tchan128/ecommerce-backend-tc/assets/56553374/b1fa679d-2b03-4401-9266-70eb6e54d351">
 
 5. DELETE category
 
-<img width="1415" alt="Screenshot 2024-01-31 at 10 32 19 PM" src="https://github.com/tchan128/ecommerce-backend-tc/assets/56553374/7176e302-7c07-4b58-bc59-b9f6a3b731f9">
 
 ## Credits
 
@@ -126,11 +121,10 @@ This e-commerce backend was improved upon from the starter code. The starter cod
 
 In addition to that, some websites that helped with the build of this e-commerce backend include:
 
-- Sequelize Model Instances: https://sequelize.org/docs/v6/core-concepts/model-instances/
-- Sequelize Model Basics: https://sequelize.org/docs/v6/core-concepts/model-basics/
-- Sequelize Associations: https://sequelize.org/docs/v6/core-concepts/assocs/
-- Sequelize Validation & Constraints: https://sequelize.org/docs/v7/models/validations-and-constraints/#:~:text=Using%20the%20%40NotNull%20decorator%2C%20you,the%20query%20to%20the%20database.
-- Sequelize Model Querying: https://sequelize.org/docs/v6/core-concepts/model-querying-basics/
+- Mongoose Models: https://mongoosejs.com/docs/models.html
+- Mongoose Validation: https://mongoosejs.com/docs/validation.html#built-in-validators
+- Mongoose Schema: https://mongoosejs.com/docs/schematypes.html#dates
+
 
 README icon is found here: <a href="https://www.flaticon.com/free-icons/marketing" title="marketing icons">Marketing icons created by Freepik - Flaticon</a>
 
