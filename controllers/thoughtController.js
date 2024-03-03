@@ -104,13 +104,14 @@ module.exports = {
                 userName: req.body.userName
             });
 
-            res.json(thought)
+            const updatedThought = await thought.save();
+
+            res.json(updatedThought)
         } catch (err) {
             console.log(err)
             res.status(500).json(err)
         }
     },
-
 
     // Remove a reaction for one of the thoughts
     async removeReaction(req, res) {
