@@ -81,11 +81,12 @@ module.exports = {
                 { new: true }
             )
 
+            res.json(thought)
+
             if (!thought) {
                 res.status(404).json({ message: 'No thought with this id!' })
             }
 
-            res.json(thought)
         } catch (err) {
             res.status(500).json(err)
         }
@@ -125,10 +126,11 @@ module.exports = {
             );
 
             if (!thought) {
-                return res.status(404).json({ message: 'No thought with this id' })
+                res.status(404).json({ message: 'No reaction with this id' })
             }
 
             res.json(thought)
+
         } catch (err) {
             res.status(500).json(err);
         }
