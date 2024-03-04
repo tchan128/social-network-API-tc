@@ -6,6 +6,8 @@ module.exports = {
         try {
             const users = await User.find()
                 .select('-__v -id')
+                .populate('thoughts')
+                .populate('friends');
                 
             res.json(users);
         } catch (err) {
