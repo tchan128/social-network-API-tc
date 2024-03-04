@@ -5,7 +5,8 @@ module.exports = {
     async getThoughts(req, res) {
         try {
             const thoughts = await Thought.find()
-                .select('-__v');
+                .select('-__v')
+                .populate('reactions');
 
         res.json(thoughts);
 
@@ -20,7 +21,8 @@ module.exports = {
     async getSingleThought(req, res) {
         try {
             const thought = await Thought.findOne({ _id: req.params.thoughtId })
-                .select('-__v');
+                .select('-__v')
+                .populate('reactions');
             
             res.json(thought);
 
