@@ -23,14 +23,13 @@ module.exports = {
             const thought = await Thought.findOne({ _id: req.params.thoughtId })
                 .select('-__v')
                 .populate('reactions');
-            
-            res.json(thought);
 
             if (!thought) {
                 res.status(404).json({ message: 'No thought with that ID' })
             }
 
-            res.json(thought)
+            res.json(thought);
+
         } catch (err) {
             res.status(500).json(err)
         }
@@ -65,6 +64,12 @@ module.exports = {
             if (!thought) {
                 res.status(404).json({ message: 'No thought with that ID' });
             }
+
+            const user = await User.findOneAndUpdate(
+                { _id: req.params.userId },
+                { $pull: {thoughts: req.params.friendId } },
+                { runValidators: true, new: true }
+            );
 
             res.json({ message: 'Thought deleted!' });
         } catch (err) {

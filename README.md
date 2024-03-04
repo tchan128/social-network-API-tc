@@ -94,7 +94,7 @@ In this project, a social network API is created to build a platform where users
   - POST route will add a reaction to the thought with `thoughtId`
   - DELETE route will delete a reaction to the thought with `thoughtId`
 
-To see the system in action please visit this link: 
+To see the system in action please visit this link: https://share.vidyard.com/watch/3hgUre7GPqK1TXhJT9WbPQ?
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
