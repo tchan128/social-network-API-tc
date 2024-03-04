@@ -48,7 +48,7 @@ module.exports = {
             );
             
             if (!user) {
-                return res.status(404).json({ error: 'User not found' });
+                res.status(404).json({ error: 'User not found' });
             }
             
             res.json(thought)
@@ -68,7 +68,7 @@ module.exports = {
 
             res.json({ message: 'Thought deleted!' });
         } catch (err) {
-            res.stats(500).json(err)
+            res.status(500).json(err)
         }
     },
 
